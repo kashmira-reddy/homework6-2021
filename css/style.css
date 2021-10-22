@@ -1,0 +1,233 @@
+body{
+    font-family: "Alegreya Sans SC", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes animation{
+    0%{
+      width: 50px;
+      opacity: 0;
+    }
+    100%{
+      width: 425px;
+      opacity: 1;
+    }
+  }
+
+  #logo{
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav_item a:link, a:visited{
+    color: blue;
+  }
+
+  .card header{
+    display: flex;
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  div.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+  div.skip a:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+  .pricing{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    display: flex;
+    width: 450px;
+    flex-basis: 450px;
+    flex-direction: column;
+  }
+  
+  .gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #image1{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+
+  #image2{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+
+  #image3{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+
+  #image4{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+
+  #image5{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+
+  footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 850px){
+    .card_big{
+        /* display: flex;
+        width: 250px; */
+        flex-basis: 250px;
+  }
+
+    header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0px;
+    }
+
+    .nav_links{
+      /* display: flex; */
+      flex-direction: row;
+    }
+
+    .card header{
+      position: static;
+      top: 0px;
+    }
+
+    .card{
+      /* display: flex; */
+      /* width: 250px; */
+      flex-basis: 250px;
+    }
+
+    .pricing{
+      /* display: inline-flex; */
+      flex-direction: row;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  /*Turn off scroll*/
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  /*Turn off transition*/
+  div.skip a{
+    -webkit-transition: initial; /* sets to default setting */
+    transition: initial; /* sets to default setting */
+  }
+
+  /*Turn off animation*/
+  #logo{
+    animation: none;
+  }
+}
+
+@media print{
+  body{
+    background-image: none;
+    /* background-color: transparent; */
+  }
+
+  h2#gallery{
+    display: none;
+  }
+
+  .gallery{
+    display: none;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+  .nav_links{
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .card{
+    border: 2px solid #45ADDD;
+    /* display: flex; */
+    /* width: 250px; */
+    flex-basis: 210px;
+  }
+
+  .card_big{
+    border: 2px solid #45ADDD;
+    /* display: flex;
+    width: 250px; */
+    /* flex-basis: 250px; */
+  }
+
+  .pricing{
+    /* display: flex; */
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .card > ul li:nth-child(odd)::before {
+    content: "👍";
+  }
+  .card > ul li:nth-child(even)::after {
+    content: "👍";
+  }
+}
